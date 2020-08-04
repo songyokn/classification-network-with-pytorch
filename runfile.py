@@ -104,12 +104,12 @@ def main(args):
         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])
     train_dataset = torchvision.datasets.ImageFolder(
-        root='/home/kevin/song/efficient_densenet_pytorch-master/images/train', transform=transform)
+        root=args.train_images, transform=transform)
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
 
     # 从文件夹中读取validation数据
     validation_dataset = torchvision.datasets.ImageFolder(
-        root='/home/kevin/song/efficient_densenet_pytorch-master/images/test', transform=transform)
+        root=args.test_images, transform=transform)
     print(validation_dataset.class_to_idx)
 
     test_loader = torch.utils.data.DataLoader(validation_dataset, batch_size=BATCH_SIZE, shuffle=True)
