@@ -1,0 +1,1 @@
+python runfile.py --model-name densenet --train-images /home/kevin/song/efficient_densenet_pytorch-master/images/train --test-images /home/kevin/song/efficient_densenet_pytorch-master/images/test --output-dir /home/kevin/song/efficient_densenet_pytorch-master/out0804
